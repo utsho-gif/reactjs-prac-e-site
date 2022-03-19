@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 
 const ReactModal = (props) => {
+    const {increseCart} = props;
     console.log(props);
     const {title,image, description} = props.product;
     const [show, setShow] = useState(false);
@@ -11,7 +12,7 @@ const ReactModal = (props) => {
     return (
         <>
       <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+        Details
       </Button>
 
       <Modal show={show} onHide={handleClose}>
@@ -25,9 +26,7 @@ const ReactModal = (props) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
+          <button onClick={increseCart} className='btn btn-info'>ADD</button>
         </Modal.Footer>
       </Modal>
     </>

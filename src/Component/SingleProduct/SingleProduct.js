@@ -15,7 +15,7 @@ const SingleProduct = (props) => {
             <div className='d-flex justify-content-around mt-4'>
                 <button onClick={increseCart} className='btn btn-light'>ADD</button>
                 <button onClick={disCart} className='btn btn-light'>DELETE</button>
-                <Modal product={props.product}></Modal>
+                <Modal product={props.product} increseCart={props.increseCart}></Modal>
             </div>
         </div>
         
